@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+main {
+  background: #b7f0f0;
+  min-height: 750px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+footer {
+  text-align: center;
+  color: #4c5d73;
+}
