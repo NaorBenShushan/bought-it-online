@@ -24,10 +24,8 @@ export function getCurrentUser() {
   }
 }
 
-//
-
 export async function login(email, password) {
-  const { data } = await http.post(`/auth`, { email, password });
+  const { data } = await http.post(`${apiUrl}/api/auth`, { email, password });
   localStorage.setItem("token", data.token);
   localStorage.setItem("favorites", data.favorites);
 }
@@ -36,7 +34,7 @@ export async function login(email, password) {
 export async function toggleFavorites(cardId) {
   try {
     // server
-    await http.patch(`/users/t-favorites/${cardId}`);
+    await http.patch(`${apiUrl}/api/users/t-favorites/${cardId}`);
 
     // LS
     let currentFavorites = JSON.parse(localStorage.getItem("favorites"));
@@ -58,7 +56,7 @@ export function getFavoritesLS() {
 }
 
 export async function getFavoritesSE() {
-  return await http.get(`/users/get-favorites`);
+  return await http.get(`${apiUrl}/api/users/get-favorites`);
 }
 
 const userService = {

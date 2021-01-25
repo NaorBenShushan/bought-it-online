@@ -25,7 +25,7 @@ class Register extends Form {
     const { data } = this.state;
 
     try {
-      await http.post(`/users`, data);
+      await http.post(`${apiUrl}/api/users`, data);
       toast("Congratulations! Welcome to BoughtIt community!");
       this.props.history.replace("/login");
     } catch (ex) {

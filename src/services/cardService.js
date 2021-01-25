@@ -3,30 +3,30 @@ import { apiUrl } from "../config.json";
 
 // Delete a card
 export function deleteMyCard(id) {
-  return http.delete(`/boughts/${id}`);
+  return http.delete(`${apiUrl}/api/boughts/${id}`);
 }
 
 export function getMyCards() {
-  return http.get(`/boughts/my-boughts`);
+  return http.get(`${apiUrl}/api/boughts/my-boughts`);
 }
 
 export function getAllCards() {
-  return http.get(`/boughts`);
+  return http.get(`${apiUrl}/api/boughts/`);
 }
 
 export function getCardById(id) {
-  return http.get(`/boughts/${id}`);
+  return http.get(`${apiUrl}/api/boughts/${id}`);
 }
 
 export function editCardById(card) {
   const cardId = card._id;
   delete card._id;
 
-  return http.put(`/boughts/${cardId}`, card);
+  return http.put(`${apiUrl}/api/boughts/${cardId}`, card);
 }
 
 export function createBought(bought) {
-  return http.post(`/boughts`, bought);
+  return http.post(`${apiUrl}/api/boughts`, bought);
 }
 
 const cardService = {
