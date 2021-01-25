@@ -9,8 +9,7 @@ const mongoose = require("mongoose");
 
 mongoose
   .connect(
-    //THE MongoDB SERVER => /*  "mongodb+srv://naor:Zeld5apQRJCcHp70@finalprojecthackeru.ysydv.mongodb.net/nodejs-final?retryWrites=true&w=majority", */
-    "mongodb://localhost/nodejs-final",
+    "mongodb+srv://naor:Zeld5apQRJCcHp70@bought-it-online.ysydv.mongodb.net/bought-it-online?retryWrites=true&w=majority",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
