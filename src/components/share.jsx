@@ -38,7 +38,6 @@ class Share extends Form {
   doSubmit = async () => {
     try {
       const { data } = this.state;
-      console.log(data);
       if (!data.cardImage) delete data.cardImage;
 
       await cardService.createBought(data);

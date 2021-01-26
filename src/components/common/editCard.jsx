@@ -57,8 +57,6 @@ class EditCard extends Form {
   doSubmit = async () => {
     try {
       const { data } = this.state;
-
-      console.log(data);
       await cardService.editCardById(data);
 
       toast.success("Your card edited successfully!", {
