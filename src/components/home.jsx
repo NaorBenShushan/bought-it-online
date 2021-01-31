@@ -11,6 +11,8 @@ import { withStyles } from '@material-ui/core/styles';
 import { useStyles } from './css/share';
 import NoBoughts from './common/noBoughts';
 
+import Swal from 'sweetalert2';
+
 class Home extends Component {
   state = {
     cardsToDisplay: [],
